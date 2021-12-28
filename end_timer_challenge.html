@@ -6,17 +6,18 @@
 		<button onclick="countdown()">Click here</button>
 		<p id="timer"></p>
 		<script>
-		const myTimeout = setTimeout(tick, 5000);
 		function countdown() {
 			var seconds = document.getElementById("seconds").value;
 			
 			function tick() {
 			seconds = seconds - 1;
 			timer.innerHTML = seconds;
-			setTimeout(tick, 1000);
+			myTimeout = setTimeout(tick, 1000);
 			if(seconds == -1){
 				alert("Time's up!");
 				clearTimeout(myTimeout);
+				timer.innerHTML = "";
+				document.getElementById("seconds").value = "";
 			}
 				}
 			tick();
