@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<body>
+		<p id="Team"></p>
+		<script>
+		document.write(typeof 36);
+		var Team = {
+			City:  "Pittsburgh",
+			Name: "Pirates",
+			Sport: "Baseball",
+			League: "MLB"
+		};
+		delete Team.Sport;
+		document.getElementById("Team").innerHTML = Team.League;
+		</script>
+	</body>
+</html>
